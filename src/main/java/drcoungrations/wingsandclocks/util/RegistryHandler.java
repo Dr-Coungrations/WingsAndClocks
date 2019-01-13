@@ -2,7 +2,8 @@ package drcoungrations.wingsandclocks.util;
 
 import drcoungrations.wingsandclocks.block.BlockKufariy;
 import drcoungrations.wingsandclocks.block.BlockKufariyOre;
-import drcoungrations.wingsandclocks.init.Blocks;
+import drcoungrations.wingsandclocks.init.MBlocks;
+import drcoungrations.wingsandclocks.item.ItemKey;
 import drcoungrations.wingsandclocks.item.ItemKufariyIgnot;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -31,12 +32,13 @@ public class RegistryHandler {
 		final Item[] items = {
 
 				new ItemKufariyIgnot("itemKufariy_ignot", "kufariy_ignot_item"),
+				new ItemKey("itemKey","key_item"),
 
 		};
 		
 		final Item[] itemBlocks = {
-                new ItemBlock(Blocks.KUFARIY_ORE_BLOCK).setRegistryName(Blocks.KUFARIY_ORE_BLOCK.getRegistryName()),
-                new ItemBlock(Blocks.KUFARIY_BLOCK).setRegistryName(Blocks.KUFARIY_BLOCK.getRegistryName()),
+                new ItemBlock(MBlocks.KUFARIY_ORE_BLOCK).setRegistryName(MBlocks.KUFARIY_ORE_BLOCK.getRegistryName()),
+                new ItemBlock(MBlocks.KUFARIY_BLOCK).setRegistryName(MBlocks.KUFARIY_BLOCK.getRegistryName()),
  
         };
 

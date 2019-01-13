@@ -1,7 +1,7 @@
 package drcoungrations.wingsandclocks.util;
 
-import drcoungrations.wingsandclocks.init.Blocks;
-import drcoungrations.wingsandclocks.init.Items;
+import drcoungrations.wingsandclocks.init.MBlocks;
+import drcoungrations.wingsandclocks.init.MItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -16,9 +16,12 @@ public class ModelRegistryHandler {
 	@SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
 		
-		registerModel(Items.KUFARIY_IGNOT_ITEM);
-		registerModel(Item.getItemFromBlock(Blocks.KUFARIY_ORE_BLOCK));
-		registerModel(Item.getItemFromBlock(Blocks.KUFARIY_BLOCK));
+		//Items
+		registerModel(MItems.KUFARIY_IGNOT_ITEM);
+		registerModel(MItems.KEY_ITEM);
+		//Block
+		registerModel(Item.getItemFromBlock(MBlocks.KUFARIY_ORE_BLOCK));
+		registerModel(Item.getItemFromBlock(MBlocks.KUFARIY_BLOCK));
 
     }
  

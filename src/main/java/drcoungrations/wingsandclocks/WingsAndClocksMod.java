@@ -3,12 +3,15 @@ package drcoungrations.wingsandclocks;
 import org.apache.logging.log4j.Logger;
 
 import drcoungrations.wingsandclocks.proxy.IProxy;
+import drcoungrations.wingsandclocks.recipes.ModRecipesF;
+import drcoungrations.wingsandclocks.world.gen.KufariyOreWorldGen;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = WingsAndClocksMod.MODID, name = WingsAndClocksMod.NAME, version = WingsAndClocksMod.VERSION, acceptedMinecraftVersions = WingsAndClocksMod.MC_VERSION)
 public class WingsAndClocksMod {
@@ -36,6 +39,8 @@ public class WingsAndClocksMod {
 	public void init(FMLInitializationEvent event) {
 		logger.info("WingsAndClocksMod.NAME " + "says hi!");
 		proxy.init(event);
+		GameRegistry.registerWorldGenerator(new KufariyOreWorldGen(), 0);
+		ModRecipesF.initSmelting ();
 	}
 
 	@EventHandler
